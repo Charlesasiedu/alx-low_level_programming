@@ -4,15 +4,16 @@
 
 /* more headers goes there */
 
-/*main - Entry*/
-
 /* betty style doc for function main goes there */
 
+/**
+ * main - Entry
+ *
+ * Return: Always 0(success)
+ */
 int main(void)
 {
-	int n;
-
-	int m;
+	int n, m;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;

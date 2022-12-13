@@ -20,7 +20,7 @@ int main(void)
 					putchar(z);
 					putchar(y);
 					putchar(x);
-					if (!(x == '9') && (y == '8') && (z == '7'))
+					if (!(x == '9' && y == '8' && z == '7'))
 					{
 						putchar(',');
 						putchar(' ');

@@ -3,22 +3,24 @@
 #include <time.h>
 
 /**
- *main - generate password
- *Return: 0
+ * main - generates keygen.
+ * Return: 0 Always.
  */
+
 int main(void)
 {
-	int p, s;
+	int r = 0, c = 0;
+	time_t t;
 
-	srand(time(NULL));
-	s = 0;
-	while (s <= 2645)
+	srand((unsigned int) time(&t));
+	while (c < 2772)
 	{
-		p = (srand() % 128);
-		s  += p;
-		printf("%c", p);
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
 	}
-	printf("%c", 2772 - s);
-
+	printf("%c\n", (2772 - c));
 	return (0);
 }
